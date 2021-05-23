@@ -1,0 +1,43 @@
+MI:1473442268; alimama:合法公民4396-cao123..  WJ3/YY:caomou123// ;steam:caomoumou1 qq360918310
+aiqiyi:15270275057 QQ360918310..  15270275057m@sina.cn  youtube:360918310@qq.com/qq360918310``
+加加PDF:https://www.addpdf.cn/pdf-to-word.aspx
+
+grub> root (hd0,0)
+grub>makeactive 
+grub> chainloader +1
+grub> boot
+启动第一分区的系统
+
+VMware的几个虚拟设备：
+VMnet0：这是VMware用于虚拟桥接网络下的虚拟交换机；
+VMnet1：这是VMware用于虚拟Host-Only网络下的虚拟交换机；
+VMnet8：这是VMware用于虚拟NAT网络下的虚拟交换机；
+VMware Network Adapter VMnet1：这是Host用于与Host-Only虚拟网络进行通信的虚拟网卡；
+VMware Network Adapter VMnet8：这是Host用于与NAT虚拟网络进行通信的虚拟网卡；
+
+添加本地路由===》route add 192.168.2.0/24 mask 255.255.255.0 192.168.2.1
+                 ipconfig/flushdns
+
+创建热点===》1.《netsh wlan set hostednetwork mode=allow ssid=text key=12345678》
+             2.《netsh wlan start/stop/show/refresh hostednetwork》
+             3.《netsh wlan set blockperiod》指定在客户端有了一次不成功的登录之后，客户端试图连接到这个网络之前必须等待的分钟数。
+    
+diskpart->
+        ->list disk  ->select disk X  ->clean
+
+
+开机启动项：bcdedit /enum，删除启动项bcdedit /delete X 
+
+
+powershell->
+            get-command *-service           get-help get-service
+
+
+(regedit):
+    *HKEY_CURRENT_USER 些根根键包含当前登录用户的用户配置文件信息,这些信息保证不同的用户登录计算机时,使用自己的修改化设置,例如自己定义的墙纸,自己的收件箱,自己的安全访问权限. 
+    *HKEY_LOCAL_MACHINE 此根键包含了当前计算机的配置灵气,包括所安装的硬件以软件设置.这些信息是为所有的用户登录系统服务的.这是事个注册表中最庞大也是最重要的根键!
+    *HKEY_USERS HKEY_USERS根键包括默认用户的信息(DEFAULT子键)和所有以前登陆用户的信息.             *HKEY_CURRENT_CONFIG 此根键实际上是HKDY_LOCAL_MACHINE/CONFIG/0001分支下的数据完全一样.             *HKEY_DYN_DATA根键 这个键保存每次系统启动时,创建的系统配置和当前性能信息.这个根键只存在于windows 9X中 
+    *HKEY_PERFORMANCE_DATA 在windowsNT/2000/XP注册表中虽然没有HKEY_DYN_DAT键,但是它却隐藏了一个名为"HKEY_PERFORMANCE_DATA的键.所有系统中的动态信息都是存放在此子键中,系统自带的注册表编辑器无法看到些键.介可以用专门的程序来查看此键,比如使用性能监视器
+
+
+《中国古代文化常识图解》，<百家讲坛>
