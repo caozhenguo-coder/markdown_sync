@@ -30,7 +30,7 @@ pip list								//查看下载的所有第三方工具包
 pip install 第三方包 -i https://镜像源	//临时使用此镜像站下载
 
 安装jupyter notebook 浏览器代码工具：
-pip install wheel numpy pandas jupyter notebook
+pip install  [numpy matplotlib pandas] wheel jupyter notebook
 
 
 ###对象###
@@ -524,6 +524,10 @@ help()
 			        traceback.print_exc(file=f)		//将错误写入文件（日志）以便查看
 	
 	 文件操作：open(),openline[s](),write(),writeline[s]()
+
+		语法：open(name[,mode[,bufsize]])
+			mode:r,w,a,+,b
+
 			file = open(r"d:\a.txt","w")
 			str = ["aaa\n","bbb\n","ccc\n"]
 			file.writelines(str)
@@ -610,10 +614,39 @@ help()
 	
 	 GUI编程:		https://docs.python.org/
 	  常用的GUI库：
+		0.Turtle：是python内置的图形库
 		1.Tkinter：是Python的标准GUI库，支持跨平台的GUI程序开发。适合小型的GUI程序编写
-	
-		2.wxPython：是比较流行的GUI库，适合大型应用程序开发，功能强于tkinter,整体设计框架类似于MFC(Micorsoft Function Classes微软基础类库）
-		3.PyQT：QT是一种开源的GUI库，适合大型GUI程序开发。
+		2.Graphics：是基于Tkinter扩展的图形库
+		3.wxPython：是比较流行的GUI库，适合大型应用程序开发，功能强于tkinter,整体设计框架类似于MFC(Micorsoft Function Classes微软基础类库）
+		4.PyQT：QT是一种开源的GUI库，适合大型GUI程序开发。
+
+
+第三方库：
+	科学计算：
+		numpy：数据收集
+		matplotlib：数据图形图表展示
+		pandas：数据操作
+
+	爬虫：
+		Requests：自动爬取HTML页面，自动网络请求提交。
+
+			In [27]: import requests
+			In [28]: url = "http://m.ip138.com/ip.asp?ip="
+			In [29]: try:
+			    ...:     r = requests.get(url+'202.204.80.112')
+			    ...:     r.raise_for_status()					//判断访问站点状态码是否为200
+			    ...:     r.encoding = r.apparent_encoding		//判断通过http报文header和body猜测的编码格式是否相同
+			    ...:     print(r.text[-500:])					//输出url后500字节
+			    ...: except:
+			    ...:     print("爬取失败")
+
+		Robots：网络爬虫排除标准
+
+		Beautiful Soup：解析HTML页面信息标记与提取方法
+
+		
+		
+
 
 
 
